@@ -1,101 +1,86 @@
-import Image from "next/image";
+"use client";
+
+import { useCallback } from "react";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const VisualizarCertificado = (nombre_archivo: string) => {
+    window.open(`/certificates/${nombre_archivo}`, "_blank");
+  };
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Curriculum Vitae - Víctor Díaz</title>
+        <meta name="description" content="Curriculum Vitae de Víctor Díaz" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className={styles.main}>
+        <h1 className={styles.title}>Curriculum Vitae</h1>
+        <section className={styles.section}>
+          <h2>Información Personal</h2>
+          <p><strong>Nombre:</strong> Víctor Díaz</p>
+          <p><strong>Dirección:</strong> Las Teodokildas, Av. Caracas, Ciudad Guayana</p>
+          <p><strong>Teléfono:</strong> (0412) 180-8884</p>
+          <p><strong>Email:</strong> arteagaj124@gmail.com</p>
+          <p>Soy una persona diligente y comprometida...</p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>Prácticas</h2>
+          <p><strong>Servicio Comunitario:</strong> Universidad Nacional Experimental de Guayana</p>
+          <p>Desarrollo integral de una aplicación web...</p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>Habilidades Técnicas</h2>
+          <ul>
+            <li>C/C++</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+            <li>Visual Code</li>
+          </ul>
+        </section>
+
+        <section className={styles.section}>
+          <h2>Idiomas</h2>
+          <p>Español: Nativo</p>
+          <p>Inglés: Básico</p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>Certificados</h2>
+          <button className={styles.button} onClick={() => VisualizarCertificado("certificado_1.pdf")}>
+            Certificado de Introducción al Desarrollo Web
+          </button>
+
+          
+          <button className={styles.button} onClick={() => VisualizarCertificado("certificado_2.pdf")}>
+            Introducción al UX/UI sin ser diseñador
+          </button>
+          
+          <button className={styles.button} onClick={() => VisualizarCertificado("certificado_3.pdf")}>
+            UX/UI En la era remota: Estrategias para un diseño efectivo
+          </button>
+
+          <button className={styles.button} onClick={() => VisualizarCertificado("certificado_4.pdf")}>
+            Bases de GIT, GITHUB
+          </button>
+
+          <button className={styles.button} onClick={() => VisualizarCertificado("certificado_5.pdf")}>
+            Evoluciona en diseño: Técnicas esenciales de Design System UX UI
+          </button>
+          
+          <button className={styles.button} onClick={() => VisualizarCertificado("certificado_6.pdf")}>
+            Taller de Figma
+          </button>
+          
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
