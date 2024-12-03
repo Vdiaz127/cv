@@ -4,24 +4,32 @@ Este proyecto es un portafolio personal diseñado y desarrollado desde cero con 
 ## Descripción del Proyecto
 El portafolio presenta información relevante sobre mi perfil profesional, incluyendo:
 
-# Información Personal: Datos básicos como dirección, teléfono y correo electrónico.
-# Acerca de mí: 
+Información Personal: 
+Datos básicos como dirección, teléfono y correo electrónico.
+
+Acerca de mí: 
 Una breve descripción de mi enfoque y valores profesionales.
-# Prácticas: 
+
+Prácticas: 
 Experiencias clave en desarrollo de software, destacando un proyecto académico con Laravel, PHP y PostgreSQL.
-# Habilidades Técnicas: 
+
+Habilidades Técnicas: 
 Tecnologías y herramientas con las que estoy familiarizado.
-# Idiomas:
+
+Idiomas:
 Niveles de competencia en idiomas.
-# Certificados: 
+
+Certificados: 
 Una colección de logros académicos y profesionales, con visualización directa de certificados mediante un visor en el navegador.
 
 ## Características del Proyecto
-# Diseño Responsivo:
+Diseño Responsivo:
 Adaptado para ofrecer una experiencia fluida en dispositivos móviles, tablets y pantallas de escritorio.
-# Interacción Dinámica:
+
+Interacción Dinámica:
 Uso de eventos de clic para abrir documentos en nuevas pestañas.
-# Gestión de Estilos: 
+
+Gestión de Estilos: 
 Estilos definidos a través de módulos CSS (Home.module.css) para asegurar un diseño limpio y escalable.
 
 ## Futuro del Proyecto
